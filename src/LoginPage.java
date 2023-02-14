@@ -249,7 +249,7 @@ public class LoginPage extends javax.swing.JFrame {
             
             }
             else{
-              JOptionPane.showMessageDialog(this,"User name or Password is incorrect!");
+              JOptionPane.showMessageDialog(this,"Invalid Details!");
                txtUserName.setText("");
                pswd.setText("");
             }

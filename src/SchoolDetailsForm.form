@@ -869,9 +869,6 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Monday"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkbxMondayActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="chkbxTuesday">
               <Properties>
@@ -886,25 +883,16 @@
                 <Property name="selected" type="boolean" value="true"/>
                 <Property name="text" type="java.lang.String" value="Thursday"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkbxThursdayActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="chkbxWedensday">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Wendsday"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkbxWedensdayActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="chkbxFriday">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Friday"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkbxFridayActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblAcedemicYear1">
               <Properties>

@@ -293,9 +293,6 @@ else{
         JOptionPane.showMessageDialog(null, "Password does not match");
         a_id.setText("");
                   f_name.setText("");
-                  pswd.setText("");
-                  very_pswd.setText("");
-                          
         }
 
     }//GEN-LAST:event_btnSignUp1ActionPerformed
@@ -305,7 +302,7 @@ else{
          java.sql.PreparedStatement ps = null;
          java.sql.ResultSet rs = null;
          
-          String query="SELECT `firstName` FROM `admin` WHERE `Email`='"+uname+"'";
+          String query="SELECT `First_Name` FROM `admin` WHERE `Email`='"+uname+"'";
                 
           try {
               ps=(java.sql.PreparedStatement) MyConnection.getConnection().prepareStatement(query);

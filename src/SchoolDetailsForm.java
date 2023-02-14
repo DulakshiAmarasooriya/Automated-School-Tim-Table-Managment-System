@@ -477,11 +477,6 @@ public class SchoolDetailsForm extends javax.swing.JFrame {
         jLabel2.setText("School Days");
 
         chkbxMonday.setText("Monday");
-        chkbxMonday.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkbxMondayActionPerformed(evt);
-            }
-        });
 
         chkbxTuesday.setText("Tuesday");
         chkbxTuesday.addActionListener(new java.awt.event.ActionListener() {
@@ -492,25 +487,10 @@ public class SchoolDetailsForm extends javax.swing.JFrame {
 
         chkbxThursday.setSelected(true);
         chkbxThursday.setText("Thursday");
-        chkbxThursday.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkbxThursdayActionPerformed(evt);
-            }
-        });
 
         chkbxWedensday.setText("Wendsday");
-        chkbxWedensday.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkbxWedensdayActionPerformed(evt);
-            }
-        });
 
         chkbxFriday.setText("Friday");
-        chkbxFriday.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkbxFridayActionPerformed(evt);
-            }
-        });
 
         lblAcedemicYear1.setText("Acedemic Year");
 
@@ -801,8 +781,7 @@ public class SchoolDetailsForm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddNewActionPerformed
 
     private void chkbxTuesdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkbxTuesdayActionPerformed
-         String days;
-        days="tuesday";
+        // TODO add your handling code here:
     }//GEN-LAST:event_chkbxTuesdayActionPerformed
 
     private void btnCncelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCncelActionPerformed
@@ -818,16 +797,54 @@ public class SchoolDetailsForm extends javax.swing.JFrame {
     }//GEN-LAST:event_lblBooks6MouseClicked
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        String days = null;
+ 
+String monday=null;
+String tuesday=null;
+String wedensday=null;
+String thursday=null;
+String friday=null;
+
+
+
+if(chkbxMonday.isSelected())
+                {
+                     monday=String.valueOf(chkbxMonday.getText());
+
+                }
+
+if(chkbxTuesday.isSelected())
+                {
+                     tuesday=String.valueOf(chkbxTuesday.getText());
+
+                }
+
+if(chkbxWedensday.isSelected())
+                {
+                     wedensday=String.valueOf(chkbxWedensday.getText());
+
+                }
+
+if(chkbxThursday.isSelected())
+                {
+                     thursday=String.valueOf(chkbxThursday.getText());
+
+                }
+
+
+if(chkbxFriday.isSelected())
+                {
+                     friday=String.valueOf(chkbxFriday.getText());
+
+                }
+ ResultSet rs = null;
+       PreparedStatement ps;       
         
-        ResultSet rs = null;
-        PreparedStatement ps;  
            try {
             String query="INSERT INTO `schooldays`(`days`) VALUES (?)";
              ps = MyConnection.getConnection().prepareStatement(query);
            
-             ps.setString(1,days);
-            
+            // ps.setString(1,start1);
+            // ps.setString(2,start2);
             
             if(ps.executeUpdate() > 0)
             {
@@ -879,26 +896,6 @@ public class SchoolDetailsForm extends javax.swing.JFrame {
     private void txtendActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtendActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtendActionPerformed
-
-    private void chkbxMondayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkbxMondayActionPerformed
-       String days;
-        days="monday";
-    }//GEN-LAST:event_chkbxMondayActionPerformed
-
-    private void chkbxWedensdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkbxWedensdayActionPerformed
-         String days;
-        days="wedensday";
-    }//GEN-LAST:event_chkbxWedensdayActionPerformed
-
-    private void chkbxThursdayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkbxThursdayActionPerformed
-        String days;
-        days="thursday";
-    }//GEN-LAST:event_chkbxThursdayActionPerformed
-
-    private void chkbxFridayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkbxFridayActionPerformed
-         String days;
-        days="friday";
-    }//GEN-LAST:event_chkbxFridayActionPerformed
 
     /**
      * @param args the command line arguments

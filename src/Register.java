@@ -229,7 +229,7 @@ public class Register extends javax.swing.JFrame {
            
             ps = MyConnection.getConnection().prepareStatement(query);
            
-            ps.setString(1,fname);
+           /* ps.setString(1,fname);
             ps.setString(2,lname);
             ps.setString(3,email);
             ps.setString(4,password);
